@@ -7,4 +7,4 @@ const router = require("./routes/router");
 server.use('/', router);
 server.set('view engine', 'ejs');
 
-Promise.resolve(server.listen(80)).then(() => console.log("Server started."));
+Promise.resolve(server.listen(process.env.PORT)).then(() => console.log("Server started."));
